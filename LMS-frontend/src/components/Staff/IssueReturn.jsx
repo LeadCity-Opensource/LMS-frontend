@@ -16,25 +16,26 @@ const IssueReturn = () => {
   };
 
   return (
-    <div style={{ padding: '20px', border: '1px solid #ccc', margin: '10px' }}>
+    <div style={{ padding: '20px', border: '1px solid #ccc', margin: '10px', maxWidth: '400px' }}>
       <h2>Staff: Issue & Return</h2>
-      
+
       <div>
         <input
-          style={{ padding: "10px", margin: "5px", fontSize: "13px" }}
+          type="text"
           placeholder="Student ID"
           value={formData.studentId}
           onChange={(e) => setFormData({ ...formData, studentId: e.target.value })}
+          style={{ padding: "10px", margin: "5px", fontSize: "13px", width: "100%" }}
         />
         <input
-          style={{ padding: "10px", fontSize: "13px", marginLeft: "5px" }}
+          type="text"
           placeholder="Book ID"
           value={formData.bookId}
           onChange={(e) => setFormData({ ...formData, bookId: e.target.value })}
+          style={{ padding: "10px", margin: "5px", fontSize: "13px", width: "100%" }}
         />
-        <br />
-        <button style={{ margin: "20px" }} onClick={() => handleAction('issue')}>Issue</button>
-        <button onClick={() => handleAction('return')}>Return</button>
+        <button onClick={() => handleAction('issue')} style={{ margin: "10px 5px" }}>Issue</button>
+        <button onClick={() => handleAction('return')} style={{ margin: "10px 5px" }}>Return</button>
       </div>
     </div>
   );
